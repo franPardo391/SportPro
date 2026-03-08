@@ -1,0 +1,365 @@
+/* =============================================
+   VARIABLES
+   ============================================= */
+:root {
+  --color-fondo:      #0d1a14;
+  --color-superficie: #1a2b21;
+  --color-campo:      #111a14;
+  --color-borde:      rgba(255, 255, 255, 0.10);
+  --color-acento:     #c8f5a0;
+  --color-texto:      #edf5ea;
+  --color-suave:      rgba(255, 255, 255, 0.45);
+  --radio:            999px;
+}
+
+/* =============================================
+   RESET Y BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+/* =============================================
+   CONTENIDO
+   ============================================= */
+.contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Botón volver */
+.boton-volver {
+  font-size: 0.85rem;
+  color: var(--color-suave);
+  text-decoration: none;
+}
+
+.boton-volver:hover {
+  color: var(--color-acento);
+}
+
+/* =============================================
+   BLOQUE SUPERIOR (foto + detalles)
+   ============================================= */
+.bloque-superior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Foto de la pista */
+.foto-pista {
+  position: relative;
+  background: #2a3a2e;
+  border-radius: 14px;
+  border: 1.5px solid var(--color-borde);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-foto {
+  color: rgba(255, 255, 255, 0.2);
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Avatar del usuario */
+.avatar-usuario {
+  position: absolute;
+  bottom: -16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #3b82f6;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid var(--color-fondo);
+}
+
+/* Detalles */
+.detalles-pista {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detalles-pista h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.precio-pista {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: inline-block;
+}
+
+.precio-pista span {
+  font-size: 1rem;
+  color: var(--color-suave);
+}
+
+.metodo-info {
+  font-size: 0.85rem;
+  color: var(--color-suave);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+/* Selector tarjeta/efectivo */
+.selector-pago {
+  display: flex;
+  gap: 10px;
+}
+
+.boton-pago {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--color-borde);
+  background: transparent;
+  color: var(--color-suave);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.boton-pago.activo {
+  background: var(--color-texto);
+  color: var(--color-fondo);
+  border-color: var(--color-texto);
+}
+
+/* =============================================
+   CALENDARIO
+   ============================================= */
+.bloque-calendario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloque-calendario h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-suave);
+}
+
+/* Días */
+.lista-dias {
+  display: flex;
+  gap: 10px;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--color-borde);
+  cursor: pointer;
+  min-width: 52px;
+}
+
+.dia.activo {
+  background: var(--color-superficie);
+  border-color: var(--color-acento);
+}
+
+.nombre-dia {
+  font-size: 0.65rem;
+  color: var(--color-suave);
+  text-transform: uppercase;
+}
+
+.numero-dia {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.mes-dia {
+  font-size: 0.65rem;
+  color: var(--color-suave);
+}
+
+/* Horas */
+.lista-horas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hora {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+  background: transparent;
+  color: var(--color-suave);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.hora.activa {
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  border-color: var(--color-acento);
+}
+
+/* =============================================
+   FORMULARIO DE RESERVA
+   ============================================= */
+.bloque-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #d8ddd9;
+  border-radius: 14px;
+  padding: 28px;
+  color: #111;
+}
+
+.bloque-formulario h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.formulario-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.campo input,
+.campo textarea {
+  background: #111a14;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: var(--color-texto);
+  width: 100%;
+  resize: none;
+}
+
+/* Botón confirmar */
+.boton-confirmar {
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+
+.boton-confirmar:hover {
+  background: var(--color-fondo);
+}
+
+/* Resumen */
+.resumen-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resumen-reserva h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.linea-resumen {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #333;
+}
+
+/* Botones de pago */
+.metodos-pago {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.boton-metodo-pago {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.boton-metodo-pago.visa   { background: #1a1f71; color: white; }
+.boton-metodo-pago.apple  { background: #111; color: white; }
+.boton-metodo-pago.bizum  { background: #00cfae; color: #111; }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 640px) {
+  .bloque-superior { grid-template-columns: 1fr; }
+  .lista-dias { overflow-x: auto; }
+  .fila-campos { grid-template-columns: 1fr; }
+}   

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportNet – Iniciar Sesión</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/inicio-sesion.css" />
+</head>
+<body>
+
+  <div class="contenedor-pagina">
+
+    <div class="tarjeta-auth">
+
+      <div class="logo">SP</div>
+
+      <div class="cabecera-auth">
+        <div class="opcion-auth activa">
+          <span>Inicia sesión</span>
+          <small>en SportNet</small>
+        </div>
+        <div class="opcion-auth">
+          <a href="registro.html">
+            <span>Regístrate</span>
+            <small>en SportNet</small>
+          </a>
+        </div>
+      </div>
+
+      <form class="formulario">
+        <div class="campo">
+          <label for="usuario">Usuario o correo electrónico</label>
+          <input type="text" id="usuario" placeholder="Usuario o correo electrónico" />
+        </div>
+
+        <div class="campo">
+          <div class="fila-label">
+            <label for="contrasena">Contraseña</label>
+            <a href="#" class="enlace-olvido">¿Olvidaste la contraseña?</a>
+          </div>
+          <input type="password" id="contrasena" placeholder="Contraseña" />
+        </div>
+
+        <a href="../index.html"><button type="submit" class="boton-enviar">Iniciar sesión</button></a>
+      </form>
+
+      <div class="divisor">o continúa con</div>
+      <div class="botones-sociales">
+        <button class="boton-social">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" />
+        </button>
+        <button class="boton-social">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" />
+        </button>
+        <button class="boton-social">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+        </button>
+      </div>
+
+    </div>
+
+    <div class="pie-auth">
+      <a href="#">Términos</a>
+      <a href="#">Ley de Privacidad</a>
+      <a href="#">Asistencia al cliente</a>
+      <a href="#">Cookies</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

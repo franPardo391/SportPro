@@ -1,0 +1,190 @@
+/* =============================================
+   VARIABLES
+   ============================================= */
+:root {
+  --color-fondo:      #0d1a14;
+  --color-superficie: #1a2b21;
+  --color-borde:      rgba(255, 255, 255, 0.10);
+  --color-acento:     #c8f5a0;
+  --color-texto:      #edf5ea;
+  --color-suave:      rgba(255, 255, 255, 0.45);
+  --radio:            999px;
+}
+
+/* =============================================
+   RESET Y BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+/* =============================================
+   NAVEGACIÓN
+   ============================================= */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 48px;
+  background: rgba(13, 26, 20, 0.90);
+  border-bottom: 1px solid var(--color-borde);
+  z-index: 100;
+}
+
+.boton-nav {
+  padding: 8px 20px;
+  border-radius: var(--radio);
+  border: 1.5px solid var(--color-borde);
+  background: transparent;
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.boton-nav.activo {
+  background: var(--color-texto);
+  color: var(--color-fondo);
+  border-color: var(--color-texto);
+}
+
+.separador-nav {
+  width: 1px;
+  height: 28px;
+  background: var(--color-borde);
+}
+
+.usuario-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-suave);
+  font-size: 0.88rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-superficie);
+  border: 1.5px solid var(--color-borde);
+  display: grid;
+  place-items: center;
+}
+
+/* =============================================
+   CONTENIDO
+   ============================================= */
+.contenido {
+  padding: 120px 60px 80px;
+  max-width: 800px;
+}
+
+.cabecera-seccion {
+  margin-bottom: 40px;
+}
+
+.etiqueta-seccion {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-suave);
+  margin-bottom: 8px;
+}
+
+.cabecera-seccion h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+/* =============================================
+   LISTA DE RESERVAS
+   ============================================= */
+.lista-reservas {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tarjeta-reserva {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a2320;
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 18px 20px;
+  gap: 16px;
+}
+
+.reserva-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reserva-nombre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.estado-reserva {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: var(--radio);
+  font-weight: 600;
+}
+
+.estado-reserva.confirmado {
+  background: rgba(200, 245, 160, 0.15);
+  border: 1px solid rgba(200, 245, 160, 0.3);
+  color: var(--color-acento);
+}
+
+.reserva-detalles {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--color-suave);
+}
+
+/* Botón cancelar */
+.boton-cancelar {
+  padding: 8px 18px;
+  border-radius: var(--radio);
+  border: 1px solid rgba(200, 50, 50, 0.4);
+  background: rgba(200, 50, 50, 0.1);
+  color: #f08080;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.boton-cancelar:hover {
+  background: rgba(200, 50, 50, 0.25);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 640px) {
+  .contenido { padding: 100px 20px 60px; }
+  .tarjeta-reserva { flex-direction: column; align-items: flex-start; }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportNet – Reservar Pista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/reserva.css" />
+</head>
+<body>
+
+  <main class="contenido">
+
+    <a href="instalaciones.html" class="boton-volver">← Volver a instalaciones</a>
+
+    <div class="bloque-superior">
+
+      <div class="foto-pista">
+        <div class="placeholder-foto">FOTO<br/>PISTA</div>
+        <div class="avatar-usuario">F</div>
+      </div>
+
+      <div class="detalles-pista">
+        <h1>Campo Municipal Norte</h1>
+        <div class="precio-pista">6,50€<span>/hora</span></div>
+        <div class="metodo-info">Pago en Instalación o Tarjeta</div>
+        <div class="selector-pago">
+          <button class="boton-pago activo">Tarjeta</button>
+          <button class="boton-pago">Efectivo</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bloque-calendario">
+      <h3>Seleccionar fecha y hora</h3>
+
+      <div class="lista-dias">
+        <div class="dia activo">
+          <span class="nombre-dia">LUN</span>
+          <span class="numero-dia">23</span>
+          <span class="mes-dia">feb</span>
+        </div>
+        <div class="dia">
+          <span class="nombre-dia">MAR</span>
+          <span class="numero-dia">24</span>
+          <span class="mes-dia">feb</span>
+        </div>
+        <div class="dia">
+          <span class="nombre-dia">MIÉ</span>
+          <span class="numero-dia">25</span>
+          <span class="mes-dia">feb</span>
+        </div>
+        <div class="dia">
+          <span class="nombre-dia">JUE</span>
+          <span class="numero-dia">26</span>
+          <span class="mes-dia">feb</span>
+        </div>
+        <div class="dia">
+          <span class="nombre-dia">VIE</span>
+          <span class="numero-dia">27</span>
+          <span class="mes-dia">feb</span>
+        </div>
+        <div class="dia">
+          <span class="nombre-dia">SÁB</span>
+          <span class="numero-dia">28</span>
+          <span class="mes-dia">feb</span>
+        </div>
+      </div>
+
+      <div class="lista-horas">
+        <button class="hora activa">09:00</button>
+        <button class="hora">10:00</button>
+        <button class="hora">11:00</button>
+        <button class="hora">12:00</button>
+        <button class="hora">13:00</button>
+        <button class="hora">16:00</button>
+        <button class="hora">17:00</button>
+        <button class="hora">18:00</button>
+        <button class="hora">19:00</button>
+        <button class="hora">20:00</button>
+      </div>
+    </div>
+
+    <div class="bloque-formulario">
+      <h3>Datos de la Reserva</h3>
+
+      <form class="formulario-reserva">
+        <div class="fila-campos">
+          <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" />
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="notas">Notas</label>
+          <textarea id="notas" rows="4"></textarea>
+        </div>
+
+        <a href="mis-reservas.html"><button type="submit" class="boton-confirmar">Confirmar Reserva</button></a>
+      </form>
+
+      <div class="resumen-reserva">
+        <h4>Resumen de Reserva</h4>
+        <div class="linea-resumen"><span>Pista</span><span>Campo Municipal Norte</span></div>
+        <div class="linea-resumen"><span>Fecha</span><span>23 feb 2025</span></div>
+        <div class="linea-resumen"><span>Horario</span><span>09:00</span></div>
+        <div class="linea-resumen"><span>Total</span><span>6,50€</span></div>
+        <div class="linea-resumen"><span>Método de pago</span><span>—</span></div>
+      </div>
+
+      <div class="metodos-pago">
+        <button class="boton-metodo-pago visa">💳 Visa</button>
+        <button class="boton-metodo-pago apple">🍎 Apple Pay</button>
+        <button class="boton-metodo-pago bizum">⚡ Bizum</button>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* =============================================
+   VARIABLES
+   ============================================= */
+:root {
+  --color-fondo:      #0d1a14;
+  --color-tarjeta:    #111a14;
+  --color-superficie: #1a2b21;
+  --color-campo:      #1e2e22;
+  --color-borde:      rgba(255, 255, 255, 0.10);
+  --color-acento:     #c8f5a0;
+  --color-texto:      #edf5ea;
+  --color-suave:      rgba(255, 255, 255, 0.45);
+  --radio:            999px;
+}
+
+/* =============================================
+   RESET Y BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============================================
+   CONTENEDOR
+   ============================================= */
+.contenedor-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 24px;
+}
+
+/* =============================================
+   TARJETA
+   ============================================= */
+.tarjeta-auth {
+  background: #161f18;
+  border: 1px solid var(--color-borde);
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  display: grid;
+  place-items: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 auto;
+  color: var(--color-texto);
+}
+
+/* Cabecera con dos opciones */
+.cabecera-auth {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.opcion-auth {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.opcion-auth span {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-suave);
+}
+
+.opcion-auth small {
+  font-size: 0.8rem;
+  color: var(--color-suave);
+}
+
+.opcion-auth.activa span {
+  color: var(--color-texto);
+}
+
+.opcion-auth.activa small {
+  color: var(--color-texto);
+}
+
+.opcion-auth a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.opcion-auth a span,
+.opcion-auth a small {
+  color: var(--color-suave);
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 0.8rem;
+  color: var(--color-suave);
+}
+
+.fila-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.campo input {
+  background: var(--color-campo);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: var(--color-acento);
+}
+
+.enlace-olvido {
+  font-size: 0.75rem;
+  color: var(--color-suave);
+  text-decoration: none;
+}
+
+.enlace-olvido:hover {
+  color: var(--color-acento);
+}
+
+.boton-enviar {
+  background: #1a1a1a;
+  color: var(--color-texto);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+}
+
+.boton-enviar:hover {
+  background: var(--color-acento);
+  color: var(--color-fondo);
+}
+
+/* Divisor */
+.divisor {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-suave);
+  position: relative;
+}
+
+/* Botones sociales */
+.botones-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.boton-social {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 1px solid var(--color-borde);
+  background: var(--color-campo);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+}
+
+.boton-social img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(10);
+}
+
+.boton-social:nth-child(2) img {
+  filter: none;
+}
+
+.boton-social:nth-child(3) img {
+  filter: none;
+}
+
+/* Pie de página */
+.pie-auth {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pie-auth a {
+  font-size: 0.75rem;
+  color: var(--color-suave);
+  text-decoration: none;
+}
+
+.pie-auth a:hover {
+  color: var(--color-acento);
+}

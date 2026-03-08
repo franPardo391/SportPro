@@ -1,0 +1,497 @@
+/* =============================================
+   VARIABLES GLOBALES
+   ============================================= */
+:root {
+  --color-fondo:       #0d1a14;
+  --color-superficie:  #1a2b21;
+  --color-borde:       rgba(255, 255, 255, 0.10);
+  --color-acento:      #c8f5a0;
+  --color-texto:       #edf5ea;
+  --color-suave:       rgba(255, 255, 255, 0.45);
+  --radio-redondo:     999px;
+}
+
+/* =============================================
+   RESET BÁSICO
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+/* =============================================
+   NAVEGACIÓN
+   ============================================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 18px 48px;
+  z-index: 100;
+  background: rgba(13, 26, 20, 0.85);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.boton-nav {
+  padding: 9px 22px;
+  border-radius: var(--radio-redondo);
+  border: 1.5px solid var(--color-borde);
+  background: transparent;
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.boton-nav:hover {
+  background: var(--color-superficie);
+}
+
+.boton-nav.activo {
+  background: var(--color-texto);
+  color: var(--color-fondo);
+  border-color: var(--color-texto);
+}
+
+.separador-nav {
+  width: 1px;
+  height: 32px;
+  background: var(--color-borde);
+  margin: 0 6px;
+}
+
+.usuario-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-suave);
+  font-size: 0.88rem;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-superficie);
+  border: 1.5px solid var(--color-borde);
+  display: grid;
+  place-items: center;
+}
+
+.boton-salir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-suave);
+  font-size: 1.1rem;
+}
+
+.boton-salir:hover {
+  color: var(--color-texto);
+}
+
+/* =============================================
+   HERO (SECCIÓN PRINCIPAL)
+   ============================================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  overflow: hidden;
+}
+
+/* Decoración SVG de pista */
+.decoracion-pista {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 300px;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.nombre-marca {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-suave);
+  margin-bottom: 16px;
+}
+
+.fila-etiqueta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.linea-etiqueta {
+  width: 40px;
+  height: 1px;
+  background: var(--color-suave);
+}
+
+.texto-etiqueta {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-suave);
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+
+h1 span {
+  color: var(--color-acento);
+}
+
+.subtitulo {
+  max-width: 420px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-suave);
+  margin-bottom: 52px;
+}
+
+.fila-botones {
+  display: flex;
+  gap: 14px;
+}
+
+.boton {
+  padding: 16px 36px;
+  border-radius: var(--radio-redondo);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+}
+
+.boton-principal {
+  background: var(--color-texto);
+  color: var(--color-fondo);
+  border-color: var(--color-texto);
+}
+
+.boton-principal:hover {
+  background: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--color-texto);
+  border-color: var(--color-borde);
+}
+
+.boton-secundario:hover {
+  background: var(--color-superficie);
+}
+
+/* Barra de estadísticas */
+.barra-estadisticas {
+  position: absolute;
+  bottom: 52px;
+  left: 80px;
+  display: flex;
+  gap: 60px;
+}
+
+.numero-estadistica {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.numero-estadistica span {
+  color: var(--color-acento);
+}
+
+.etiqueta-estadistica {
+  font-size: 0.75rem;
+  color: var(--color-suave);
+  margin-top: 4px;
+}
+
+/* =============================================
+   SECCIÓN DEPORTES
+   ============================================= */
+.deportes {
+  padding: 100px 80px;
+}
+
+.cabecera-seccion {
+  margin-bottom: 52px;
+}
+
+.etiqueta-seccion {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+  margin-bottom: 10px;
+}
+
+.cabecera-seccion h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.descripcion-seccion {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-suave);
+}
+
+/* Rejilla de tarjetas */
+.rejilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Tarjeta individual */
+.tarjeta {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  background: #162018;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  border-color: rgba(200, 245, 160, 0.2);
+}
+
+/* Zona de imagen */
+.tarjeta-imagen {
+  position: relative;
+  height: 200px;
+  background: #2a3a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-foto {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Insignia de disponibilidad */
+.insignia {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 14px;
+  border-radius: var(--radio-redondo);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.insignia--disponible {
+  background: rgba(200, 245, 160, 0.15);
+  border: 1px solid rgba(200, 245, 160, 0.35);
+  color: var(--color-acento);
+}
+
+.insignia--no-disponible {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-suave);
+}
+
+/* Cuerpo de la tarjeta */
+.tarjeta-cuerpo {
+  padding: 22px 22px 26px;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.tarjeta-cuerpo h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tarjeta-cuerpo p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-suave);
+  flex: 1;
+}
+
+.boton-tarjeta {
+  margin-top: 14px;
+  align-self: flex-start;
+  padding: 10px 24px;
+  border-radius: var(--radio-redondo);
+  border: 1.5px solid var(--color-borde);
+  background: transparent;
+  color: var(--color-texto);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.boton-tarjeta:hover {
+  background: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--color-fondo);
+}
+
+/* =============================================
+   PIE DE PÁGINA
+   ============================================= */
+.pie-pagina {
+  background: #0a1510;
+  border-top: 1px solid var(--color-borde);
+  padding: 52px 80px 28px;
+}
+
+.pie-superior {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.logo-pie {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  border: 1.5px solid var(--color-borde);
+  padding: 10px 24px;
+  border-radius: 6px;
+}
+
+/* Métodos de pago */
+.metodos-pago {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.iconos-pago {
+  display: flex;
+  gap: 10px;
+}
+
+.icono-pago {
+  height: 36px;
+  background: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.icono-pago svg {
+  height: 28px;
+  width: auto;
+}
+
+.etiqueta-pago {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-suave);
+}
+
+/* Columnas del pie */
+.columnas-pie {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.columna-pie h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.columna-pie ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.columna-pie ul li a {
+  font-size: 0.78rem;
+  color: var(--color-suave);
+  text-decoration: none;
+}
+
+.columna-pie ul li a:hover {
+  color: var(--color-acento);
+}
+
+.pie-inferior {
+  border-top: 1px solid var(--color-borde);
+  padding-top: 20px;
+  font-size: 0.75rem;
+  color: var(--color-suave);
+  text-align: center;
+}
+
+/* =============================================
+   RESPONSIVE (MÓVIL)
+   ============================================= */
+@media (max-width: 640px) {
+  nav { padding: 14px 20px; }
+  .hero { padding: 0 24px; }
+  .decoracion-pista { display: none; }
+  .barra-estadisticas { left: 24px; gap: 32px; bottom: 36px; }
+  .deportes { padding: 60px 24px; }
+  .rejilla-tarjetas { grid-template-columns: 1fr; }
+  .pie-pagina { padding: 40px 24px 24px; }
+  .pie-superior { flex-direction: column; gap: 24px; }
+  .columnas-pie { grid-template-columns: 1fr 1fr; }
+}
