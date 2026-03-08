@@ -442,7 +442,7 @@ h1 span {
 /* Columnas del pie */
 .columnas-pie {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   margin-bottom: 48px;
 }
@@ -494,4 +494,18 @@ h1 span {
   .pie-pagina { padding: 40px 24px 24px; }
   .pie-superior { flex-direction: column; gap: 24px; }
   .columnas-pie { grid-template-columns: 1fr 1fr; }
+}
+
+/* Enlace Google Maps en el footer */
+.enlace-maps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-acento);
+  text-decoration: none;
+  font-size: 0.78rem;
+}
+
+.enlace-maps:hover {
+  text-decoration: underline;
 }

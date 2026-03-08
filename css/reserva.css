@@ -81,21 +81,7 @@ body {
   line-height: 1.6;
 }
 
-/* Avatar del usuario */
-.avatar-usuario {
-  position: absolute;
-  bottom: -16px;
-  left: 16px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #3b82f6;
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  border: 2px solid var(--color-fondo);
-}
+
 
 /* Detalles */
 .detalles-pista {
@@ -340,15 +326,16 @@ body {
 
 .boton-metodo-pago {
   width: 100%;
-  padding: 14px;
+  padding: 14px 20px;
   border-radius: 10px;
   border: none;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  text-align: left;
-  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .boton-metodo-pago.visa   { background: #1a1f71; color: white; }
@@ -362,4 +349,4 @@ body {
   .bloque-superior { grid-template-columns: 1fr; }
   .lista-dias { overflow-x: auto; }
   .fila-campos { grid-template-columns: 1fr; }
-}   
+}
