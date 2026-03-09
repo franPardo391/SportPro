@@ -134,24 +134,47 @@ nav {
   border-color: rgba(200, 245, 160, 0.25);
 }
 
-/* Zona de foto */
+/* =============================================
+   ZONA DE FOTO
+   ============================================= */
 .tarjeta-imagen {
   height: 200px;
-  background: #2a3a2e;
+  background-color: #2a3a2e;   /* color de fondo si no hay foto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: flex-start;
   padding: 14px;
 }
 
+/* ── RUTAS DE FOTOS ──────────────────────────────
+   Solo cambia la url() por la ruta de tu imagen.
+   El ../ sube un nivel desde css/ hasta la raíz,
+   luego entra en img/.
+   ──────────────────────────────────────────────── */
+.tarjeta-imagen.foto-tenis {
+  background-image: url('../img/tenis.jfif');
+}
+
+.tarjeta-imagen.foto-padel {
+  background-image: url('../img/Padel.webp');
+}
+
+.tarjeta-imagen.foto-futbol {
+  background-image: url('../img/futbol.jpg');
+}
+
 /* Etiqueta del deporte */
 .etiqueta-deporte {
-  background: #111;
+  background: rgba(0, 0, 0, 0.6);
   color: var(--color-texto);
   font-size: 0.72rem;
   font-weight: 600;
   padding: 4px 12px;
   border-radius: var(--radio);
+  backdrop-filter: blur(4px);
 }
 
 /* Información debajo de la foto */

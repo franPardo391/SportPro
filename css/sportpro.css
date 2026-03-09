@@ -116,7 +116,6 @@ nav {
   overflow: hidden;
 }
 
-/* Decoración SVG de pista */
 .decoracion-pista {
   position: absolute;
   right: 80px;
@@ -212,7 +211,6 @@ h1 span {
   background: var(--color-superficie);
 }
 
-/* Barra de estadísticas */
 .barra-estadisticas {
   position: absolute;
   bottom: 52px;
@@ -273,14 +271,12 @@ h1 span {
   color: var(--color-suave);
 }
 
-/* Rejilla de tarjetas */
 .rejilla-tarjetas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-/* Tarjeta individual */
 .tarjeta {
   border-radius: 14px;
   overflow: hidden;
@@ -295,14 +291,42 @@ h1 span {
   border-color: rgba(200, 245, 160, 0.2);
 }
 
-/* Zona de imagen */
+/* =============================================
+   ZONA DE IMAGEN DE TARJETA
+   ============================================= */
 .tarjeta-imagen {
   position: relative;
   height: 200px;
-  background: #2a3a2e;
+  background-color: #2a3a2e;   /* color si no hay foto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ── RUTAS DE FOTOS ──────────────────────────────
+   Solo cambia la url() por la ruta de tu imagen.
+   Desde css/ usa img/ en la misma raíz: url('../img/nombre.jpg')
+   ──────────────────────────────────────────────── */
+.tarjeta-imagen.foto-tenis {
+  background-image: url('../img/tenis.jfif');
+}
+
+.tarjeta-imagen.foto-padel {
+  background-image: url('../img/Padel.webp');
+}
+
+.tarjeta-imagen.foto-futbol {
+  background-image: url('../img/futbol.jpg');
+}
+
+/* Cuando hay foto, el texto FOTO desaparece */
+.tarjeta-imagen.foto-tenis .placeholder-foto,
+.tarjeta-imagen.foto-padel .placeholder-foto,
+.tarjeta-imagen.foto-futbol .placeholder-foto {
+  display: none;
 }
 
 .placeholder-foto {
@@ -312,7 +336,6 @@ h1 span {
   color: rgba(255, 255, 255, 0.2);
 }
 
-/* Insignia de disponibilidad */
 .insignia {
   position: absolute;
   top: 14px;
@@ -335,7 +358,6 @@ h1 span {
   color: var(--color-suave);
 }
 
-/* Cuerpo de la tarjeta */
 .tarjeta-cuerpo {
   padding: 22px 22px 26px;
   background: #1e1e1e;
@@ -405,7 +427,6 @@ h1 span {
   border-radius: 6px;
 }
 
-/* Métodos de pago */
 .metodos-pago {
   display: flex;
   flex-direction: column;
@@ -439,7 +460,6 @@ h1 span {
   color: var(--color-suave);
 }
 
-/* Columnas del pie */
 .columnas-pie {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -473,6 +493,19 @@ h1 span {
   color: var(--color-acento);
 }
 
+.enlace-maps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-acento);
+  text-decoration: none;
+  font-size: 0.78rem;
+}
+
+.enlace-maps:hover {
+  text-decoration: underline;
+}
+
 .pie-inferior {
   border-top: 1px solid var(--color-borde);
   padding-top: 20px;
@@ -496,16 +529,20 @@ h1 span {
   .columnas-pie { grid-template-columns: 1fr 1fr; }
 }
 
-/* Enlace Google Maps en el footer */
-.enlace-maps {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--color-acento);
-  text-decoration: none;
-  font-size: 0.78rem;
+.tarjeta-imagen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.enlace-maps:hover {
-  text-decoration: underline;
+.tarjeta-imagen.foto-tenis {
+  background-image: url('../img/tenis.jfif  g');
+}
+
+.tarjeta-imagen.foto-padel {
+  background-image: url('../img/Padel.webp');
+}
+
+.tarjeta-imagen.foto-futbol {
+  background-image: url('../img/futbol.jpg');
 }
