@@ -1,17 +1,4 @@
 /* =============================================
-   VARIABLES
-   ============================================= */
-:root {
-  --color-fondo:      #0d1a14;
-  --color-superficie: #1a2b21;
-  --color-borde:      rgba(255, 255, 255, 0.10);
-  --color-acento:     #c8f5a0;
-  --color-texto:      #edf5ea;
-  --color-suave:      rgba(255, 255, 255, 0.45);
-  --radio:            999px;
-}
-
-/* =============================================
    RESET Y BASE
    ============================================= */
 *, *::before, *::after {
@@ -21,8 +8,8 @@
 }
 
 body {
-  background: var(--color-fondo);
-  color: var(--color-texto);
+  background: #0d1a14;
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
 }
@@ -39,38 +26,38 @@ nav {
   gap: 10px;
   padding: 16px 48px;
   background: rgba(13, 26, 20, 0.90);
-  border-bottom: 1px solid var(--color-borde);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
   z-index: 100;
 }
 
 .boton-nav {
   padding: 8px 20px;
-  border-radius: var(--radio);
-  border: 1.5px solid var(--color-borde);
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
   background: transparent;
-  color: var(--color-texto);
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.88rem;
   cursor: pointer;
 }
 
 .boton-nav.activo {
-  background: var(--color-texto);
-  color: var(--color-fondo);
-  border-color: var(--color-texto);
+  background: #edf5ea;
+  color: #0d1a14;
+  border-color: #edf5ea;
 }
 
 .separador-nav {
   width: 1px;
   height: 28px;
-  background: var(--color-borde);
+  background: rgba(255, 255, 255, 0.10);
 }
 
 .usuario-nav {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 0.88rem;
 }
 
@@ -78,8 +65,8 @@ nav {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--color-superficie);
-  border: 1.5px solid var(--color-borde);
+  background: #1a2b21;
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
   display: grid;
   place-items: center;
 }
@@ -100,7 +87,7 @@ nav {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 8px;
 }
 
@@ -122,10 +109,10 @@ nav {
 .tarjeta-pista {
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--color-borde);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   background: #162018;
   text-decoration: none;
-  color: var(--color-texto);
+  color: #edf5ea;
   display: flex;
   flex-direction: column;
 }
@@ -169,11 +156,11 @@ nav {
 /* Etiqueta del deporte */
 .etiqueta-deporte {
   background: rgba(0, 0, 0, 0.6);
-  color: var(--color-texto);
+  color: #edf5ea;
   font-size: 0.72rem;
   font-weight: 600;
   padding: 4px 12px;
-  border-radius: var(--radio);
+  border-radius: 999px;
   backdrop-filter: blur(4px);
 }
 
@@ -188,12 +175,12 @@ nav {
 
 .nombre-pista {
   font-size: 0.85rem;
-  color: var(--color-texto);
+  color: #edf5ea;
 }
 
 .precio-pista {
   font-size: 0.85rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* =============================================

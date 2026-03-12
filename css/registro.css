@@ -5,16 +5,16 @@
   font-size: 1.4rem;
   font-weight: 700;
   text-align: center;
-  color: var(--color-texto);
+  color: #edf5ea;
 }
 
 .enlace-login {
   text-align: center;
   font-size: 0.82rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .enlace-login a {
-  color: var(--color-acento);
+  color: #c8f5a0;
   text-decoration: none;
 }

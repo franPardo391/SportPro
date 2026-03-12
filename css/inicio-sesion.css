@@ -1,19 +1,4 @@
 /* =============================================
-   VARIABLES
-   ============================================= */
-:root {
-  --color-fondo:      #0d1a14;
-  --color-tarjeta:    #111a14;
-  --color-superficie: #1a2b21;
-  --color-campo:      #1e2e22;
-  --color-borde:      rgba(255, 255, 255, 0.10);
-  --color-acento:     #c8f5a0;
-  --color-texto:      #edf5ea;
-  --color-suave:      rgba(255, 255, 255, 0.45);
-  --radio:            999px;
-}
-
-/* =============================================
    RESET Y BASE
    ============================================= */
 *, *::before, *::after {
@@ -23,8 +8,8 @@
 }
 
 body {
-  background: var(--color-fondo);
-  color: var(--color-texto);
+  background: #0d1a14;
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -49,7 +34,7 @@ body {
    ============================================= */
 .tarjeta-auth {
   background: #161f18;
-  border: 1px solid var(--color-borde);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 20px;
   padding: 40px 36px;
   width: 100%;
@@ -64,15 +49,15 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: var(--color-superficie);
-  border: 2px solid var(--color-borde);
+  background: #1a2b21;
+  border: 2px solid rgba(255, 255, 255, 0.10);
   display: grid;
   place-items: center;
   font-family: 'Syne', sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
   margin: 0 auto;
-  color: var(--color-texto);
+  color: #edf5ea;
 }
 
 /* Cabecera con dos opciones */
@@ -92,20 +77,20 @@ body {
   font-family: 'Syne', sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .opcion-auth small {
   font-size: 0.8rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .opcion-auth.activa span {
-  color: var(--color-texto);
+  color: #edf5ea;
 }
 
 .opcion-auth.activa small {
-  color: var(--color-texto);
+  color: #edf5ea;
 }
 
 .opcion-auth a {
@@ -116,7 +101,7 @@ body {
 
 .opcion-auth a span,
 .opcion-auth a small {
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* Formulario */
@@ -134,7 +119,7 @@ body {
 
 .campo label {
   font-size: 0.8rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .fila-label {
@@ -144,11 +129,11 @@ body {
 }
 
 .campo input {
-  background: var(--color-campo);
-  border: 1px solid var(--color-borde);
+  background: #1e2e22;
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 8px;
   padding: 12px 14px;
-  color: var(--color-texto);
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.9rem;
   width: 100%;
@@ -156,22 +141,22 @@ body {
 
 .campo input:focus {
   outline: none;
-  border-color: var(--color-acento);
+  border-color: #c8f5a0;
 }
 
 .enlace-olvido {
   font-size: 0.75rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
 }
 
 .enlace-olvido:hover {
-  color: var(--color-acento);
+  color: #c8f5a0;
 }
 
 .boton-enviar {
   background: #1a1a1a;
-  color: var(--color-texto);
+  color: #edf5ea;
   border: none;
   border-radius: 8px;
   padding: 14px;
@@ -183,15 +168,15 @@ body {
 }
 
 .boton-enviar:hover {
-  background: var(--color-acento);
-  color: var(--color-fondo);
+  background: #c8f5a0;
+  color: #0d1a14;
 }
 
 /* Divisor */
 .divisor {
   text-align: center;
   font-size: 0.78rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   position: relative;
 }
 
@@ -206,8 +191,8 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 10px;
-  border: 1px solid var(--color-borde);
-  background: var(--color-campo);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: #1e2e22;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -239,10 +224,10 @@ body {
 
 .pie-auth a {
   font-size: 0.75rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
 }
 
 .pie-auth a:hover {
-  color: var(--color-acento);
+  color: #c8f5a0;
 }

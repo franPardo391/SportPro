@@ -1,18 +1,4 @@
 /* =============================================
-   VARIABLES
-   ============================================= */
-:root {
-  --color-fondo:      #0d1a14;
-  --color-superficie: #1a2b21;
-  --color-campo:      #111a14;
-  --color-borde:      rgba(255, 255, 255, 0.10);
-  --color-acento:     #c8f5a0;
-  --color-texto:      #edf5ea;
-  --color-suave:      rgba(255, 255, 255, 0.45);
-  --radio:            999px;
-}
-
-/* =============================================
    RESET Y BASE
    ============================================= */
 *, *::before, *::after {
@@ -22,8 +8,8 @@
 }
 
 body {
-  background: var(--color-fondo);
-  color: var(--color-texto);
+  background: #0d1a14;
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
 }
@@ -43,12 +29,12 @@ body {
 /* Botón volver */
 .boton-volver {
   font-size: 0.85rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
 }
 
 .boton-volver:hover {
-  color: var(--color-acento);
+  color: #c8f5a0;
 }
 
 /* =============================================
@@ -66,7 +52,7 @@ body {
   position: relative;
   background: #2a3a2e;
   border-radius: 14px;
-  border: 1.5px solid var(--color-borde);
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
   height: 200px;
   display: flex;
   align-items: center;
@@ -100,7 +86,7 @@ body {
   font-family: 'Syne', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  border: 1px solid var(--color-borde);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 10px;
   padding: 12px 16px;
   display: inline-block;
@@ -108,13 +94,13 @@ body {
 
 .precio-pista span {
   font-size: 1rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .metodo-info {
   font-size: 0.85rem;
-  color: var(--color-suave);
-  border: 1px solid var(--color-borde);
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 10px;
   padding: 10px 14px;
 }
@@ -129,18 +115,18 @@ body {
   flex: 1;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid var(--color-borde);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   background: transparent;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   font-family: 'DM Sans', sans-serif;
   font-size: 0.88rem;
   cursor: pointer;
 }
 
 .boton-pago.activo {
-  background: var(--color-texto);
-  color: var(--color-fondo);
-  border-color: var(--color-texto);
+  background: #edf5ea;
+  color: #0d1a14;
+  border-color: #edf5ea;
 }
 
 /* =============================================
@@ -156,7 +142,7 @@ body {
   font-family: 'Syne', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* Días */
@@ -172,19 +158,19 @@ body {
   gap: 2px;
   padding: 10px 14px;
   border-radius: 10px;
-  border: 1px solid var(--color-borde);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   cursor: pointer;
   min-width: 52px;
 }
 
 .dia.activo {
-  background: var(--color-superficie);
-  border-color: var(--color-acento);
+  background: #1a2b21;
+  border-color: #c8f5a0;
 }
 
 .nombre-dia {
   font-size: 0.65rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   text-transform: uppercase;
 }
 
@@ -196,7 +182,7 @@ body {
 
 .mes-dia {
   font-size: 0.65rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* Horas */
@@ -209,18 +195,18 @@ body {
 .hora {
   padding: 8px 16px;
   border-radius: 8px;
-  border: 1px solid var(--color-borde);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   background: transparent;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   font-family: 'DM Sans', sans-serif;
   font-size: 0.82rem;
   cursor: pointer;
 }
 
 .hora.activa {
-  background: var(--color-superficie);
-  color: var(--color-texto);
-  border-color: var(--color-acento);
+  background: #1a2b21;
+  color: #edf5ea;
+  border-color: #c8f5a0;
 }
 
 /* =============================================
@@ -273,7 +259,7 @@ body {
   padding: 10px 12px;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.88rem;
-  color: var(--color-texto);
+  color: #edf5ea;
   width: 100%;
   resize: none;
 }
@@ -293,7 +279,7 @@ body {
 }
 
 .boton-confirmar:hover {
-  background: var(--color-fondo);
+  background: #0d1a14;
 }
 
 /* Resumen */

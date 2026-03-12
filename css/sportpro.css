@@ -1,17 +1,4 @@
 /* =============================================
-   VARIABLES GLOBALES
-   ============================================= */
-:root {
-  --color-fondo:       #0d1a14;
-  --color-superficie:  #1a2b21;
-  --color-borde:       rgba(255, 255, 255, 0.10);
-  --color-acento:      #c8f5a0;
-  --color-texto:       #edf5ea;
-  --color-suave:       rgba(255, 255, 255, 0.45);
-  --radio-redondo:     999px;
-}
-
-/* =============================================
    RESET BÁSICO
    ============================================= */
 *, *::before, *::after {
@@ -21,8 +8,8 @@
 }
 
 body {
-  background: var(--color-fondo);
-  color: var(--color-texto);
+  background: #0d1a14;
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
 }
@@ -42,34 +29,34 @@ nav {
   padding: 18px 48px;
   z-index: 100;
   background: rgba(13, 26, 20, 0.85);
-  border-bottom: 1px solid var(--color-borde);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .boton-nav {
   padding: 9px 22px;
-  border-radius: var(--radio-redondo);
-  border: 1.5px solid var(--color-borde);
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
   background: transparent;
-  color: var(--color-texto);
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.88rem;
   cursor: pointer;
 }
 
 .boton-nav:hover {
-  background: var(--color-superficie);
+  background: #1a2b21;
 }
 
 .boton-nav.activo {
-  background: var(--color-texto);
-  color: var(--color-fondo);
-  border-color: var(--color-texto);
+  background: #edf5ea;
+  color: #0d1a14;
+  border-color: #edf5ea;
 }
 
 .separador-nav {
   width: 1px;
   height: 32px;
-  background: var(--color-borde);
+  background: rgba(255, 255, 255, 0.10);
   margin: 0 6px;
 }
 
@@ -77,7 +64,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 0.88rem;
 }
 
@@ -85,8 +72,8 @@ nav {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--color-superficie);
-  border: 1.5px solid var(--color-borde);
+  background: #1a2b21;
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
   display: grid;
   place-items: center;
 }
@@ -95,12 +82,12 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 1.1rem;
 }
 
 .boton-salir:hover {
-  color: var(--color-texto);
+  color: #edf5ea;
 }
 
 /* =============================================
@@ -132,7 +119,7 @@ nav {
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 16px;
 }
 
@@ -146,14 +133,14 @@ nav {
 .linea-etiqueta {
   width: 40px;
   height: 1px;
-  background: var(--color-suave);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .texto-etiqueta {
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 h1 {
@@ -165,14 +152,14 @@ h1 {
 }
 
 h1 span {
-  color: var(--color-acento);
+  color: #c8f5a0;
 }
 
 .subtitulo {
   max-width: 420px;
   font-size: 1rem;
   line-height: 1.65;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 52px;
 }
 
@@ -183,7 +170,7 @@ h1 span {
 
 .boton {
   padding: 16px 36px;
-  border-radius: var(--radio-redondo);
+  border-radius: 999px;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.95rem;
   cursor: pointer;
@@ -191,24 +178,24 @@ h1 span {
 }
 
 .boton-principal {
-  background: var(--color-texto);
-  color: var(--color-fondo);
-  border-color: var(--color-texto);
+  background: #edf5ea;
+  color: #0d1a14;
+  border-color: #edf5ea;
 }
 
 .boton-principal:hover {
-  background: var(--color-acento);
-  border-color: var(--color-acento);
+  background: #c8f5a0;
+  border-color: #c8f5a0;
 }
 
 .boton-secundario {
   background: transparent;
-  color: var(--color-texto);
-  border-color: var(--color-borde);
+  color: #edf5ea;
+  border-color: rgba(255, 255, 255, 0.10);
 }
 
 .boton-secundario:hover {
-  background: var(--color-superficie);
+  background: #1a2b21;
 }
 
 .barra-estadisticas {
@@ -227,12 +214,12 @@ h1 span {
 }
 
 .numero-estadistica span {
-  color: var(--color-acento);
+  color: #c8f5a0;
 }
 
 .etiqueta-estadistica {
   font-size: 0.75rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   margin-top: 4px;
 }
 
@@ -253,7 +240,7 @@ h1 span {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-acento);
+  color: #c8f5a0;
   margin-bottom: 10px;
 }
 
@@ -268,7 +255,7 @@ h1 span {
 .descripcion-seccion {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .rejilla-tarjetas {
@@ -280,7 +267,7 @@ h1 span {
 .tarjeta {
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid var(--color-borde);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   background: #162018;
   display: flex;
   flex-direction: column;
@@ -341,7 +328,7 @@ h1 span {
   top: 14px;
   left: 14px;
   padding: 5px 14px;
-  border-radius: var(--radio-redondo);
+  border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 600;
 }
@@ -349,13 +336,13 @@ h1 span {
 .insignia--disponible {
   background: rgba(200, 245, 160, 0.15);
   border: 1px solid rgba(200, 245, 160, 0.35);
-  color: var(--color-acento);
+  color: #c8f5a0;
 }
 
 .insignia--no-disponible {
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .tarjeta-cuerpo {
@@ -377,7 +364,7 @@ h1 span {
 .tarjeta-cuerpo p {
   font-size: 0.88rem;
   line-height: 1.55;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   flex: 1;
 }
 
@@ -385,19 +372,19 @@ h1 span {
   margin-top: 14px;
   align-self: flex-start;
   padding: 10px 24px;
-  border-radius: var(--radio-redondo);
-  border: 1.5px solid var(--color-borde);
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
   background: transparent;
-  color: var(--color-texto);
+  color: #edf5ea;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   cursor: pointer;
 }
 
 .boton-tarjeta:hover {
-  background: var(--color-acento);
-  border-color: var(--color-acento);
-  color: var(--color-fondo);
+  background: #c8f5a0;
+  border-color: #c8f5a0;
+  color: #0d1a14;
 }
 
 /* =============================================
@@ -405,7 +392,7 @@ h1 span {
    ============================================= */
 .pie-pagina {
   background: #0a1510;
-  border-top: 1px solid var(--color-borde);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
   padding: 52px 80px 28px;
 }
 
@@ -415,14 +402,14 @@ h1 span {
   justify-content: space-between;
   margin-bottom: 48px;
   padding-bottom: 36px;
-  border-bottom: 1px solid var(--color-borde);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .logo-pie {
   font-family: 'Syne', sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
-  border: 1.5px solid var(--color-borde);
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
   padding: 10px 24px;
   border-radius: 6px;
 }
@@ -457,7 +444,7 @@ h1 span {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .columnas-pie {
@@ -485,19 +472,19 @@ h1 span {
 
 .columna-pie ul li a {
   font-size: 0.78rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
 }
 
 .columna-pie ul li a:hover {
-  color: var(--color-acento);
+  color: #c8f5a0;
 }
 
 .enlace-maps {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--color-acento);
+  color: #c8f5a0;
   text-decoration: none;
   font-size: 0.78rem;
 }
@@ -507,10 +494,10 @@ h1 span {
 }
 
 .pie-inferior {
-  border-top: 1px solid var(--color-borde);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
   padding-top: 20px;
   font-size: 0.75rem;
-  color: var(--color-suave);
+  color: rgba(255, 255, 255, 0.45);
   text-align: center;
 }
 
