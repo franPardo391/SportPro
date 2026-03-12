@@ -1,0 +1,48 @@
+/* Estilos específicos de recuperar contraseña */
+
+.tarjeta-recuperar {
+  max-width: 460px;
+}
+
+.cabecera-recuperar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.etiqueta-recuperar {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: #c8f5a0;
+}
+
+.cabecera-recuperar h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: #edf5ea;
+}
+
+.texto-recuperar {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.acciones-recuperar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.acciones-recuperar a {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+}
+
+.acciones-recuperar a:hover {
+  color: #c8f5a0;
+}
