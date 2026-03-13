@@ -24,12 +24,25 @@ nav {
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
   padding: 18px 48px;
   z-index: 100;
   background: rgba(13, 26, 20, 0.85);
   border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  display: block;
+  width: auto;
+  height: 44px;
+  object-fit: contain;
 }
 
 .boton-nav {
@@ -60,35 +73,6 @@ nav {
   margin: 0 6px;
 }
 
-.usuario-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 0.88rem;
-}
-
-.avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #1a2b21;
-  border: 1.5px solid rgba(255, 255, 255, 0.10);
-  display: grid;
-  place-items: center;
-}
-
-.boton-salir {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 1.1rem;
-}
-
-.boton-salir:hover {
-  color: #edf5ea;
-}
 
 /* =============================================
    HERO (SECCIÓN PRINCIPAL)
@@ -532,4 +516,75 @@ h1 span {
 
 .tarjeta-imagen.foto-futbol {
   background-image: url('../img/futbol.jpg');
+}
+
+.acciones-auth-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.boton-auth {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.boton-auth-login {
+  color: #edf5ea;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.boton-auth-login:hover {
+  background: #1a2b21;
+  border-color: rgba(200, 245, 160, 0.28);
+}
+
+.boton-auth-registro {
+  color: #0d1a14;
+  background: #c8f5a0;
+  border: 1px solid #c8f5a0;
+  box-shadow: 0 10px 24px rgba(200, 245, 160, 0.16);
+}
+
+.boton-auth-registro:hover {
+  background: #edf5ea;
+  border-color: #edf5ea;
+}
+
+.icono-auth {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c8f5a0;
+}
+
+.icono-auth svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  nav {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .nav-logo {
+    width: 100%;
+    margin-right: 0;
+  }
 }
