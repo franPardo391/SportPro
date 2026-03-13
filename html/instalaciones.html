@@ -4,21 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SportPro – Instalaciones</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/instalaciones.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+<link rel="stylesheet" href="../css/instalaciones.css" />
 </head>
 <body>
 
   <nav>
-    <a href="../SportPro.html" class="nav-logo" aria-label="Ir al inicio">
+    <a href="../index.html" class="nav-logo" aria-label="Ir al inicio">
       <img src="../img/logo-sp.png" alt="SportPro" />
     </a>
-    <a href="../SportPro.html"><button class="boton-nav">Inicio</button></a>
+    <a href="../index.html"><button class="boton-nav">Inicio</button></a>
     <a href="mis-reservas.html"><button class="boton-nav">Mis Reservas</button></a>
     <div class="separador-nav"></div>
-    <div class="usuario-nav">
-      <div class="avatar">👤</div>
-      <span>nombre usuario</span>
+    <div class="acciones-auth-nav">
+      <a href="inicio-sesion.html" class="boton-auth boton-auth-login">
+        <span class="icono-auth" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M4 21C4.8 17.9 7.7 16 12 16C16.3 16 19.2 17.9 20 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>Iniciar sesión</span>
+      </a>
+      <a href="registro.html" class="boton-auth boton-auth-registro">Registro</a>
     </div>
   </nav>
 
