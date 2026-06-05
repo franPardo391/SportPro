@@ -44,6 +44,7 @@ $usuarios = $consulta->fetchAll();
             <th>Email</th>
             <th>DNI</th>
             <th>Teléfono</th>
+            <th>Contraseña</th>
             <th>Rol</th>
             <th>Activo</th>
             <th>Acciones</th>
@@ -57,6 +58,7 @@ $usuarios = $consulta->fetchAll();
         <td><?php echo $usuario["email"]; ?></td>
         <td><?php echo $usuario["dni"]; ?></td>
         <td><?php echo $usuario["telefono"]; ?></td>
+        <td><?php echo $usuario["password"];?></td>
         <td><?php echo $usuario["rol"]; ?></td>
         <td><?php echo $usuario["activo"]; ?></td>
         <td>
