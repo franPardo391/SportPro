@@ -33,10 +33,11 @@ body {
    TARJETA
    ============================================= */
 .tarjeta-auth {
+  position: relative;
   background: #161f18;
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 20px;
-  padding: 40px 36px;
+  padding: 48px 36px 40px;
   width: 100%;
   max-width: 420px;
   display: flex;
@@ -44,7 +45,60 @@ body {
   gap: 24px;
 }
 
-/* Logo */
+/* =============================================
+   BOTÓN VOLVER
+   ============================================= */
+.volver-link {
+  position: absolute;
+  top: -20px;
+  left: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(18, 35, 24, 0.85);
+  border: 1px solid rgba(200, 245, 160, 0.18);
+  border-radius: 999px;
+  color: #d7f7b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 0 rgba(200, 245, 160, 0);
+  transition: all 0.25s ease;
+  z-index: 20;
+}
+
+.volver-link:hover {
+  transform: translateX(-3px);
+  background: rgba(28, 52, 36, 0.95);
+  border-color: rgba(200, 245, 160, 0.35);
+  box-shadow: 0 0 18px rgba(200, 245, 160, 0.12);
+  color: #f3ffe7;
+}
+
+.volver-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(200, 245, 160, 0.12);
+  color: #c8f5a0;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.volver-link:hover .volver-icon {
+  background: rgba(200, 245, 160, 0.22);
+  color: #eaffd2;
+}
+
+/* =============================================
+   LOGO
+   ============================================= */
 .logo {
   width: 60px;
   height: 60px;
@@ -60,7 +114,9 @@ body {
   color: #edf5ea;
 }
 
-/* Cabecera con dos opciones */
+/* =============================================
+   CABECERA
+   ============================================= */
 .cabecera-auth {
   display: flex;
   justify-content: space-around;
@@ -104,7 +160,9 @@ body {
   color: rgba(255, 255, 255, 0.45);
 }
 
-/* Formulario */
+/* =============================================
+   FORMULARIO
+   ============================================= */
 .formulario {
   display: flex;
   flex-direction: column;
@@ -154,6 +212,9 @@ body {
   color: #c8f5a0;
 }
 
+/* =============================================
+   BOTÓN ENVIAR
+   ============================================= */
 .boton-enviar {
   background: #1a1a1a;
   color: #edf5ea;
@@ -172,7 +233,9 @@ body {
   color: #0d1a14;
 }
 
-/* Divisor */
+/* =============================================
+   DIVISOR
+   ============================================= */
 .divisor {
   text-align: center;
   font-size: 0.78rem;
@@ -180,7 +243,9 @@ body {
   position: relative;
 }
 
-/* Botones sociales */
+/* =============================================
+   BOTONES SOCIALES
+   ============================================= */
 .botones-sociales {
   display: flex;
   justify-content: center;
@@ -214,7 +279,9 @@ body {
   filter: none;
 }
 
-/* Pie de página */
+/* =============================================
+   PIE DE PÁGINA
+   ============================================= */
 .pie-auth {
   display: flex;
   gap: 20px;
@@ -230,52 +297,4 @@ body {
 
 .pie-auth a:hover {
   color: #c8f5a0;
-}
-
-.volver-link {
-    position: absolute;
-    top: 22px;
-    left: 22px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
-    background: rgba(18, 35, 24, 0.7);
-    border: 1px solid rgba(200, 245, 160, 0.18);
-    border-radius: 999px;
-    color: #d7f7b8;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 0 rgba(200, 245, 160, 0);
-    transition: all 0.25s ease;
-    z-index: 20;
-}
-
-.volver-link:hover {
-    transform: translateX(-3px);
-    background: rgba(28, 52, 36, 0.9);
-    border-color: rgba(200, 245, 160, 0.35);
-    box-shadow: 0 0 18px rgba(200, 245, 160, 0.12);
-    color: #f3ffe7;
-}
-
-.volver-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: rgba(200, 245, 160, 0.12);
-    color: #c8f5a0;
-    font-size: 13px;
-    transition: all 0.25s ease;
-}
-
-.volver-link:hover .volver-icon {
-    background: rgba(200, 245, 160, 0.22);
-    color: #eaffd2;
 }
